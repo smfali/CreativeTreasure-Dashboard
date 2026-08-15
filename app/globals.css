@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 24 24 27;
+    --card: 255 255 255;
+    --card-foreground: 24 24 27;
+    --muted: 244 244 245;
+    --muted-foreground: 113 113 122;
+    --border: 228 228 231;
+    --input: 228 228 231;
+    --accent: 16 185 129;
+    --accent-foreground: 9 9 11;
+    --success: 5 150 105;
+    --warning: 217 119 6;
+    --destructive: 220 38 38;
+    --info: 37 99 235;
+    --ring: 16 185 129;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 9 9 11;
+    --foreground: 244 244 245;
+    --card: 24 24 27;
+    --card-foreground: 244 244 245;
+    --muted: 39 39 42;
+    --muted-foreground: 161 161 170;
+    --border: 39 39 42;
+    --input: 39 39 42;
+    --accent-foreground: 9 9 11;
+    --success: 16 185 129;
+    --warning: 245 158 11;
+    --destructive: 239 68 68;
+    --info: 59 130 246;
+  }
+
+  *:focus-visible {
+    outline: 2px solid rgb(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .heading-page {
+    @apply text-2xl font-bold;
+  }
+
+  .heading-section {
+    @apply text-sm font-medium;
+  }
+
+  .text-label {
+    @apply text-sm font-medium text-muted-foreground;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.3s ease-out;
+}
+
+@media print {
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+}

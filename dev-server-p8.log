@@ -1,0 +1,12 @@
+
+> creatortreasury@0.1.0 start
+> next start
+
+▲ Next.js 16.3.0
+- Local:         http://localhost:3100
+- Network:       http://192.168.100.175:3100
+✓ Ready in 577ms
+⚠ Warning: Next.js ignored package-lock.json in D:\Development because it is outside the current Git repository (D:\Development\Dashborads).
+ To use this directory, set `outputFileTracingRoot` in your Next.js config.
+
+✓ Running next.config.mjs took 55ms
